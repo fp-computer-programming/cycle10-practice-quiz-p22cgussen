@@ -20,3 +20,15 @@ def factorial(numb):
         end *= index
     return end
 print(factorial(5))
+
+# Question 3
+def fib_nums(numb):
+    lst = [0,1]
+    if numb == 1 or numb == 2:
+        return lst[0:numb]
+    else:
+        for x in range(numb - 2):
+            lst.append(lst[x] + lst[(len(lst) - 1)])
+    return lst
+
+print(fib_nums(5) == [0,1,1,2,3], fib_nums(10) == [0,1,1,2,3,5,8,13,21,34])
